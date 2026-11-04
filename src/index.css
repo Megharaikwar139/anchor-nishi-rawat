@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-charcoal: #101014;
+    --color-richblack: #08080B;
+    --color-burgundy: #641C32;
+    --color-champagne: #D6B779;
+    --color-softgold: #BFA16A;
+    --color-ivory: #F7F2E9;
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    font-family: 'Inter', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    background-color: #08080B;
+    color: #F7F2E9;
+    overflow-x: hidden;
+  }
+
+  /* Custom Luxury Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #08080B;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a251d;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D6B779;
+  }
+}
+
+/* Luxury Typography & Gradient Utilities */
+.font-editorial {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-script {
+  font-family: 'Pinyon Script', cursive;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFFDF9 0%, #F5DEB3 25%, #D6B779 60%, #9A7D4A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-subtle {
+  background: linear-gradient(135deg, #F7F2E9 0%, #D6B779 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #EAD7A6 0%, #D6B779 50%, #BFA16A 100%);
+}
+
+.border-gold-glow {
+  border-color: rgba(214, 183, 121, 0.4);
+  box-shadow: 0 0 20px rgba(214, 183, 121, 0.15);
+}
+
+.box-gold-glow {
+  box-shadow: 0 10px 40px -10px rgba(214, 183, 121, 0.2);
+}
+
+.box-burgundy-glow {
+  box-shadow: 0 10px 40px -10px rgba(100, 28, 50, 0.35);
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(16, 16, 20, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(214, 183, 121, 0.15);
+}
+
+.glass-card {
+  background: linear-gradient(145deg, rgba(24, 24, 32, 0.6) 0%, rgba(12, 12, 15, 0.8) 100%);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(214, 183, 121, 0.12);
+}
+
+.glass-card:hover {
+  border-color: rgba(214, 183, 121, 0.45);
+  box-shadow: 0 12px 32px -8px rgba(214, 183, 121, 0.18);
+}
+
+/* Spotlight Beam Effect */
+.spotlight-radial {
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(214, 183, 121, 0.08),
+    transparent 40%
+  );
+}
+
+/* Modern Web Guidance: Native Dialog & Modal Backdrop Scroll Containment */
+dialog:modal {
+  overscroll-behavior: contain;
+}
+
+dialog::backdrop {
+  overflow: hidden;
+  overscroll-behavior: contain;
+  background: rgba(4, 4, 6, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Modern Web Guidance: Form Validation feedback on :user-invalid and :user-valid */
+input:user-invalid,
+textarea:user-invalid,
+select:user-invalid {
+  border-color: #ef4444 !important;
+  background-color: rgba(239, 68, 68, 0.06) !important;
+}
+
+input:user-invalid:focus,
+textarea:user-invalid:focus,
+select:user-invalid:focus {
+  outline: 2px solid #ef4444 !important;
+}
+
+input:user-valid:not(:placeholder-shown),
+textarea:user-valid:not(:placeholder-shown) {
+  border-color: rgba(214, 183, 121, 0.6) !important;
+}
+
+.field-error-msg {
+  display: none;
+}
+
+.field-group:has(:user-invalid) .field-error-msg {
+  display: flex;
+}
+
+/* Hide cursor on touch devices */
+@media (pointer: coarse) {
+  .custom-cursor-element {
+    display: none !important;
+  }
+}
+

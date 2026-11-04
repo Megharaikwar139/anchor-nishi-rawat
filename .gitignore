@@ -1,0 +1,44 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node dependencies & build
+node_modules
+dist
+dist-ssr
+*.local
+
+# Apache local root sync folders (originals live in public/)
+/assets/
+/images/
+/videos/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+Thumbs.db
+
+# Temporary extraction & scratch scripts
+extracted_assets
+New folder
+catalog_images.php
+extract_all_images.php
+extract_text.php
+organize_images.php
+extracted_clean_text.txt
+extracted_text.txt
+step330.txt
+index.php
+api
